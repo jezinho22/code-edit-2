@@ -1,27 +1,23 @@
-import { useEffect, useRef } from "react";
-import { createCodeMirror } from "@codemirror-toolkit/react";
+import { EditorState, basicSetup } from "@codemirror/basic-setup";
+import { EditorView, keymap } from "@codemirror/view";
+import { defaultKeymap } from "@codemirror/commands";
+import { useRef, useEffect } from "react";
 
 export default function Editor() {
-	const editorRef = useRef(null);
+	const editor = useRef();
 
 	useEffect(() => {
-		const codeMirror = createCodeMirror({
-			extensions: [],
-			doc: "Hello, CodeMirror!",
+		const startState = EditorState.create({
+			doc: "Hello World",
+			extensions: [basicSetup, keymap.of(defaultKeymap)],
 		});
-		console.log(codeMirror);
 
-		if (editorRef.current) {
-			const editorView = codeMirror.createView({
-				root: editorRef.current,
-			});
+		const view = new EditorView({ state: startState, parent: editor.current });
 
-			// Clean up when the component unmounts
-			return () => {
-				editorView.destroy();
-			};
-		}
+		return () => {
+			view.destroy();
+		};
 	}, []);
 
-	return <div ref={editorRef} />;
+	return <div ref={editor}></div>;
 }
