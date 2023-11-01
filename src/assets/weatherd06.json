@@ -136,11 +136,8 @@
 		],
 		"lat": "47.6038321",
 		"lon": "-122.330062",
-		// "display_name": "Seattle, King County, Washington, USA",
 		"city_name": "Seattle",
-		// "lon": "-122.33207",
 		"timezone": "America/Los_Angeles",
-		// "lat": "47.60621",
 		"country_code": "US",
 		"state_code": "WA"
 	},
@@ -282,10 +279,7 @@
 
 		"lat": "48.8588897",
 		"lon": "2.3200410217200766",
-		// "display_name": "Paris, Ile-de-France, Metropolitan France, France",
 		"city_name": "Paris",
-		// "lon": 2.35,
-		// "lat": 48.86,
 		"timezone": "Europe/Paris",
 		"country_code": "FR",
 		"state_code": "11"
@@ -427,10 +421,7 @@
 		],
 		"lat": "31.9515694",
 		"lon": "35.9239625",
-		// "display_name": "Amman, Amman Sub-District, Amman Qasabah District, Amman, 11110, Jordan",
 		"city_name": "Amman",
-		// "lon": 35.91,
-		// "lat": 31.95,
 		"timezone": "Asia/Amman",
 		"country_code": "JO",
 		"state_code": "16"
