@@ -2,6 +2,11 @@ import { basicSetup } from "codemirror";
 import { EditorState } from "@codemirror/state";
 import { EditorView, keymap } from "@codemirror/view";
 import { defaultKeymap, indentWithTab } from "@codemirror/commands";
+import { oneDark } from '@codemirror/theme-one-dark'
+import  { javascript } from '@codemirror/lang-javascript'
+
+
+
 import { useRef, useEffect } from "react";
 
 export default function Editor() {
@@ -10,7 +15,7 @@ export default function Editor() {
 	useEffect(() => {
 		const startState = EditorState.create({
 			doc: "Hello World",
-			extensions: [basicSetup, keymap.of([defaultKeymap, indentWithTab])],
+			extensions: [javascript(), oneDark, basicSetup, keymap.of([defaultKeymap, indentWithTab])],
 		});
 
 		const view = new EditorView({ state: startState, parent: editor.current });
