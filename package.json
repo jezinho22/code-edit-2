@@ -10,10 +10,10 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@codemirror-toolkit/react": "^0.4.2",
 		"@codemirror/basic-setup": "^0.20.0",
 		"@codemirror/commands": "^6.3.0",
 		"@codemirror/view": "^6.21.4",
+		"codemirror": "^6.0.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"use-sync-external-store": "^1.2.0"
